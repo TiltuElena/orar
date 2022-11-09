@@ -1,31 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    /* min-height: 100vh; */
-    display: grid;
-    grid-template-columns: 10% 30% auto 10%;
-    grid-template-rows: 1;
-}
 
-.bg-img{
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: -130px;
-    left: 0;
+body {
+    display: grid;
+    grid-template-columns: 10% 33% auto 10%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("http://orar.usarb.md/img/new_background_1.png");
 }
 
-#left-section{
+#left-section {
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
@@ -33,7 +21,7 @@ body{
     margin: 20px 20px 0px 20px;
 }
 
-#right-section{
+#right-section {
     grid-column: 3/4;
     margin: 20px;
     display: flex;
@@ -42,112 +30,142 @@ body{
     gap: 10px;
 }
 
-#right-section img{
+#right-section img {
     width: 130px;
     height: 89px;
 }
 
-#right-section h4{
+#right-section h4 {
     color: white;
     font-weight: bold;
     font-size: 1.25rem;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.schedule{
+.schedule {
     display: flex;
+    flex-direction: column;
     border: 0.5px solid gray;
     width: 100%;
     height: 200px;
-
 }
 
-.schedule div div{
+.schedule div {
+    display: flex;
+}
+
+.schedule div:hover div:first-child {
+    background: LightGoldenRodYellow;
+    color: black;
+}
+
+#nr:hover div {
+    background: #25975A;
+}
+
+.schedule div div {
     background: white;
-    border: 0.0001px solid gray; 
-    width: 48px;
-    height: 25px; 
+    border: 0.0001px solid gray;
+    width: 12%;
+    height: 25px;
     color: white;
-    text-align: center;
-    padding: 3px ;
+    padding: 3px;
 }
 
-.schedule div:first-child div{
+.schedule div:first-child div {
+    display: flex;
     background: #25975A;
-    border: 0.5px solid white; 
-    width: 100px;
-    height: 25px; 
+    border: 0.5px solid white;
+    width: 12%;
+    height: 25px;
+    justify-content: center;
 }
 
-.schedule div div:first-child{
+.schedule div div:first-child {
     background: #25975A;
-    border: 0.2px solid white; 
+    border: 0.2px solid white;
+    width: 20%;
+    display: flex;
+    justify-content: center;
 }
 
-.student img{
+.student img {
     width: 43px;
     height: 30px;
 }
 
-.header{
+.header {
     background: white;
     text-align: center;
     color: gray;
     padding: 15px;
     font-size: 20px;
-    font-weight:bold ;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.selectSchedule a{
+.selectSchedule a {
     background: #25975A;
     color: white;
     padding: 12px 30px;
     font-weight: bold;
 }
 
-
-.selectSchedule a:hover{
+.selectSchedule a:hover {
     background: white;
     color: gray;
 }
 
-.selectSchedule{
+.selectSchedule {
     display: flex;
     justify-content: space-between;
 }
 
-#search{
+#search {
     width: 100%;
-    padding:10px 10px 10px 30px;
+    padding: 10px 10px 10px 40px;
     font-size: 15px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.search-container{
+#search:focus {
+    outline: none;
+}
+
+.search-container {
     position: relative;
 }
 
-.search-container span{
+.search-container span {
     color: green;
     position: absolute;
     top: 12px;
     left: 8px;
 }
 
-.blank{
+.blank {
     background: white;
     height: 100px;
     width: 100%;
 }
 
-select{
+.blank select {
+    width: 100%;
+    border: none;
+    appearance: none;
+}
+
+.blank select:active {
+    border: none;
+}
+
+select {
     padding: 10px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
@@ -155,7 +173,7 @@ select{
     font-weight: bold;
 }
 
-.options{
+.options {
     color: white;
     font-size: 13px;
     display: flex;
@@ -163,17 +181,18 @@ select{
     gap: 15px;
 }
 
-.options div{
+.options div {
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
-.footer-button{
-   
+.footer-button {
     color: white;
     width: 125px;
-    padding:5px ;
+    padding: 5px;
     display: flex;
     align-items: center;
     border-radius: 3px;
@@ -181,65 +200,83 @@ select{
     border: 1px solid white;
 }
 
-#download{
+.footer-button a {
+    color: white;
+}
+
+#download {
     background: #25975A;
 }
 
-#exams{
+#exams {
     background: #f0506e;
     width: 100px;
 }
 
-.student{
+.student {
     display: flex;
     align-items: center;
 }
 
-.student span{
+.student a {
     color: gray;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: space-between;
 }
 
-#work-time{
+#work-time {
     color: #32d296;
     background: #edfbf6;
     padding: 20px;
 }
 
-.schedule-large{
+.schedule-large {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.schedule-large div{
+.schedule-large div {
     width: 100%;
     display: flex;
 }
 
-.schedule-large div span{
+.schedule-large div span {
     display: inline-block;
     height: 60px;
-    padding: 10px ;
+    padding: 10px;
     border: 0.5px solid gray;
 }
 
-.schedule-large div span:first-child{
+.schedule-large div span:first-child {
     width: 20%;
     color: white;
     background: #25975A;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    text-align: center;
     border: 1px solid white;
 }
 
-.schedule-large div span:last-child{
+.schedule-large div:hover span:first-child {
+    background: LightGoldenRodYellow;
+    color: black;
+}
+
+.schedule-large div:hover span:last-child {
+    background: LightGoldenRodYellow;
+    color: black;
+    border: 1px solid white;
+}
+
+.schedule-large div span:last-child {
     width: 80%;
     background: white;
+}
+
+ul {
+    list-style: none;
 }
