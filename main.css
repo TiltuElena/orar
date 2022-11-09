@@ -60,26 +60,34 @@ a{
 }
 
 .schedule{
-    grid-template-columns: 2fr repeat(7, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    border: 1px solid gray;
+    display: flex;
+    border: 0.5px solid gray;
     width: 100%;
     height: 200px;
 
 }
 
-/* .nr{
+.schedule div div{
+    background: white;
+    border: 0.0001px solid gray; 
+    width: 48px;
+    height: 25px; 
+    color: white;
+    text-align: center;
+    padding: 3px ;
+}
+
+.schedule div:first-child div{
     background: #25975A;
+    border: 0.5px solid white; 
+    width: 100px;
+    height: 25px; 
+}
 
-}  */
-
-/* .schedule span{
-    display: inline-block;
-    background: black;
-    border: white;
-    width: 5%;
-    height: 5%;
-} */
+.schedule div div:first-child{
+    background: #25975A;
+    border: 0.2px solid white; 
+}
 
 .student img{
     width: 43px;
@@ -200,4 +208,38 @@ select{
     color: #32d296;
     background: #edfbf6;
     padding: 20px;
+}
+
+.schedule-large{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.schedule-large div{
+    width: 100%;
+    display: flex;
+}
+
+.schedule-large div span{
+    display: inline-block;
+    height: 60px;
+    padding: 10px ;
+    border: 0.5px solid gray;
+}
+
+.schedule-large div span:first-child{
+    width: 20%;
+    color: white;
+    background: #25975A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    border: 1px solid white;
+}
+
+.schedule-large div span:last-child{
+    width: 80%;
+    background: white;
 }
